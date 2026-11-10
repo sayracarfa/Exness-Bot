@@ -1,0 +1,19 @@
+# --- Runtime dependencies -------------------------------------------------
+# NOT: "asyncio" Python 3.4+ standart kütüphanesinin parçasıdır. PyPI'daki
+# "asyncio" paketi 2015'ten kalma eski bir backport'tur ve stdlib'i gölgeleyip
+# event loop'u bozabilir; bu yüzden bilinçli olarak pip'ten kurulmuyor.
+# asyncio  (stdlib)
+
+# MetaTrader5 Python paketi yalnızca Windows'ta ve kurulu bir MT5 terminaliyle çalışır.
+MetaTrader5>=5.0.45; sys_platform == "win32"
+
+numpy>=1.26
+pandas>=2.1
+pydantic>=2.6
+loguru>=0.7
+uvicorn>=0.29
+tzdata>=2024.1   # zoneinfo time-zone database (required on Windows for US session hours)
+
+# FinBERT duyarlılık modeli (opsiyonel ama önerilir; yoksa sözlük tabanlı yedek model devreye girer)
+transformers>=4.40
+torch>=2.2

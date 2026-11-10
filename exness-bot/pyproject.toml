@@ -1,0 +1,10 @@
+[project]
+name = "exness-hft-bot"
+version = "0.1.0"
+description = "Asynchronous, math-driven MT5 trading bot for Exness (microprice, OU mean-reversion, VPIN, FinBERT sentiment)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

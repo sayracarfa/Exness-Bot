@@ -1,0 +1,77 @@
+{
+  "symbols": [
+    "EURUSDm"
+  ],
+  "dry_run": true,
+  "poll_interval_ms": 10,
+  "use_depth": true,
+  "api_port": 8080,
+  "risk": {
+    "max_risk_per_trade": 0.005,
+    "kelly_fraction": 0.25,
+    "max_drawdown_pct": 0.05,
+    "max_daily_loss_pct": 0.02,
+    "max_latency_ms": 50,
+    "latency_breach_count": 3,
+    "max_total_positions": 8,
+    "max_positions_per_class": {
+      "us_stock": 5,
+      "metal": 2,
+      "forex": 3
+    },
+    "max_net_direction_per_class": {
+      "us_stock": 3
+    },
+    "max_margin_usage": 0.25
+  },
+  "strategy": {
+    "ou_window": 300,
+    "z_entry": 2.0,
+    "z_exit": 0.3,
+    "vpin_threshold": 0.7
+  },
+  "nlp": {
+    "use_finbert": true,
+    "half_life_s": 900
+  },
+  "universe": {
+    "mode": "auto",
+    "asset_classes": [
+      "us_stock",
+      "metal"
+    ],
+    "exclude": [],
+    "max_symbols": 250
+  },
+  "strategy_overrides": {
+    "us_stock": {
+      "z_entry": 2.5,
+      "min_edge_to_spread": 2.0,
+      "vpin_bucket_volume": 20
+    },
+    "metal": {
+      "z_entry": 2.2
+    }
+  },
+  "sessions": {
+    "enforce": true,
+    "flatten_before_close_min": 15,
+    "no_entry_before_close_min": 30,
+    "holidays": [
+      "2026-11-26",
+      "2026-12-25"
+    ],
+    "early_closes": [
+      "2026-11-27",
+      "2026-12-24"
+    ]
+  },
+  "portfolio": {
+    "enabled": true,
+    "bar_seconds": 10,
+    "vol_spike_ratio": 2.0,
+    "vol_target_floor": 0.25,
+    "max_portfolio_var_pct": 0.01,
+    "var_horizon_s": 300
+  }
+}
