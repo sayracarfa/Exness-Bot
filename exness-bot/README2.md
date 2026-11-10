@@ -44,7 +44,7 @@ Sırada trend takibi var, aynı disiplinle. Yatırım tavsiyesi değildir.
 
 3. Ornstein–Uhlenbeck süreci: dX = θ(μ − X)dt + σ·dW. Ortalamaya dönüş. Botta var; tick ve pairs testlerinde avantaj çıkmadı.
 
-4. ADF / Engle–Granger testi: Δx*t = γ·x*{t−1} + ε, γ < 0 ise ortalamaya dönüş var demektir. Botta var.
+4. + ADF / Engle–Granger testi: Δx*t = γ·x*{t−1} + ε, γ < 0 ise ortalamaya dönüş var demektir. Botta var.-------
 
 5. Hurst üssü: E[R/S] ∝ n^H. H > 0,5 ise piyasa trendli, H < 0,5 ise ortalamaya dönüyor. Hangi stratejinin uygun olduğunu seçmek için kullanılır.
 
@@ -87,3 +87,12 @@ Sırada trend takibi var, aynı disiplinle. Yatırım tavsiyesi değildir.
 21. - VaR / CVaR: Belirli bir olasılıkla en fazla ne kaybedeceğini ölçer. Botta var.------
 
 22. Sharpe oranı ve deflated Sharpe (Bailey & López de Prado): SR = μ/σ. Deflated hâli, kaç strateji denendiyse o kadar yüksek bir eşik koyar. Çok formül deneyeceksek bu en önemlisi.
+
+
+# Şimdiye kadarki tablo (önceden kayıtlı testler):
+
+# Testler ve SonuçLar
+
++ Ornstein–Uhlenbeck (tick, 1 dk ve günlük pairs)	FAIL------
++ Test 1: Trend takibi	FAIL (maliyet öncesi bile avantaj yok)-----
++ Test 4: Carry	Exness’te pozitif swap olmadığı için çalıştırılmayacak------
