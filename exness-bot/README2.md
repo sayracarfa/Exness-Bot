@@ -95,4 +95,16 @@ Sırada trend takibi var, aynı disiplinle. Yatırım tavsiyesi değildir.
 
 + Ornstein–Uhlenbeck (tick, 1 dk ve günlük pairs)	FAIL------
 + Test 1: Trend takibi	FAIL (maliyet öncesi bile avantaj yok)-----
++ Test 2: Hurst / varyans oranı	FAIL (0/23 sembol)-------
++ Test 3: Kramers–Moyal	FAIL (seçimde 0 kural)-------
 + Test 4: Carry	Exness’te pozitif swap olmadığı için çalıştırılmayacak------
++ Test 5: Kriz filtreleri	Uygulanamaz (filtrelenecek kârlı strateji yok)------
+
+
+Dört farklı yaklaşım, birbirinden bağımsız olarak aynı sonuca vardı: fiyatlar günlük ölçekte rastgele yürüyüşten ayırt edilemiyor, kısa vadede de maliyet her şeyi yiyor.
+
+# Bu sonuç piyasada kimse kazanamaz” demek değil. Kazanan kurumların elinde bizde olmayan şeyler var:
+
+Farklı veri: Gerçek emir defteri, emir akışı, temel veriler.
+Hız: Mikrosaniye düzeyinde işlem.
+Maliyet: Spread’in onda biri kadar maliyet.
